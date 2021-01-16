@@ -1,0 +1,30 @@
+[package]
+name = "bottom_py"
+version = "0.1.0"
+authors = ["uYert Developers"]
+edition = "2018"
+include = ["src/lib.rs", "README.md"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bottomify = "0.2.0"
+pyo3 = "0.13.1"
+
+[lib]
+name = "bottom_py"
+crate-type = ["cdylib"]
+
+[features]
+default = ["pyo3/extension-module"]
+
+[profile.release]
+codegen-units = 1  # slow build but possibly faster runtime
+opt-level = 3
+debug = false
+debug-assertions = false
+overflow-checks = false
+lto = false
+panic = 'unwind'
+incremental = false
+rpath = false
