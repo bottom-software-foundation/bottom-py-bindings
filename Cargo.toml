@@ -1,6 +1,6 @@
 [package]
 name = "bottomify"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["uYert Developers <bottom@josh-is.gay>"]
 edition = "2018"
 include = ["src/lib.rs", "README.md"]
@@ -12,7 +12,7 @@ bottomify = "1.0.0"
 pyo3 = "0.13.1"
 
 [lib]
-name = "bottomify"
+name = "bottom"
 crate-type = ["cdylib"]
 
 [features]
