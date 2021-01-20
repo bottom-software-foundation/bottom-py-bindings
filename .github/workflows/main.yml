@@ -14,15 +14,10 @@ jobs:
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
-        default: true
-        override: true
     - name: Build Package
+      env:
+        PYO3_PACK_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: |
         python -m pip install --upgrade pip
-        pip install setuptools wheel
-        python setup.py sdist bdist_wheel
-    - name: Publish a Python distribution to PyPI
-      uses: pypa/gh-action-pypi-publish@master
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+        pip install pyo3-pack
+        pyo3-pack publish -u __token__
