@@ -55,7 +55,7 @@ setup_requires = ["setuptools-rust>=0.10.1", "wheel"]
 install_requires = []
 
 setup(
-    name="bottom-py",
+    name="bottomify",
     version="0.1.0",
     classifiers=[
         "License :: OSI Approved :: MIT License",
