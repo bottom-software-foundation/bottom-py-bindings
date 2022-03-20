@@ -1,6 +1,6 @@
 [package]
 name = "bottomify"
-version = "1.2.0"
+version = "1.2.1"
 authors = ["uYert Developers <bottom@josh-is.gay>"]
 readme = "README.rst"
 edition = "2021"
@@ -19,6 +19,7 @@ classifier = [
     "Intended Audience :: Developers",
     "Programming Language :: Python",
     "Programming Language :: Rust",
+    "Typing :: Typed",
 ]
 
 [lib]
